@@ -1,43 +1,11 @@
 apiVersion: v1
 entries:
-  prometheus:
-  - apiVersion: v1
-    appVersion: 2.20.1
-    created: "2020-09-07T16:16:43.765385238Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://kubernetes-charts.storage.googleapis.com/
-      version: 2.8.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 269c5590dd36783b90b44afc03f7cc0591fefbb6fe63161d66e5836a0801bab0
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    - email: monotek23@gmail.com
-      name: monotek
-    name: prometheus
-    sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
-    urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-11.13.1/prometheus-11.13.1.tgz
-    version: 11.13.1
   prometheus-blackbox-exporter:
   - apiVersion: v1
     appVersion: 0.16.0
-    created: "2020-09-07T16:16:44.021487981Z"
+    created: "2020-09-08T10:16:29.460959477Z"
     description: Prometheus Blackbox Exporter
-    digest: e68292cd686a6ef06694b6591c994c9845d9e6ce84668ede499a6b255161d0fa
+    digest: ea1339d68720ee5d8186f7d5f24fbaa74958243051a066e101f5a701b8e30714
     home: https://github.com/prometheus/blackbox_exporter
     keywords:
     - prometheus
@@ -54,47 +22,6 @@ entries:
     sources:
     - https://github.com/prometheus/blackbox_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.3.2/prometheus-blackbox-exporter-4.3.2.tgz
-    version: 4.3.2
-  prometheus-consul-exporter:
-  - apiVersion: v1
-    appVersion: 0.4.0
-    created: "2020-09-07T16:16:44.275833119Z"
-    description: A Helm chart for the Prometheus Consul Exporter
-    digest: d4027b8571c9dc01ffd573c3a8287e8f95839a890409b121c7e1cdd1ef8a2e6f
-    home: https://github.com/prometheus/consul_exporter
-    keywords:
-    - metrics
-    - consul
-    - monitoring
-    maintainers:
-    - email: 8890118+timm088@users.noreply.github.com
-      name: timm088
-    - email: github.gkarthiks@gmail.com
-      name: gkarthiks
-    name: prometheus-consul-exporter
-    urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-consul-exporter-0.1.7/prometheus-consul-exporter-0.1.7.tgz
-    version: 0.1.7
-  prometheus-redis-exporter:
-  - apiVersion: v1
-    appVersion: 1.3.4
-    created: "2020-09-07T16:16:44.548292167Z"
-    description: Prometheus exporter for Redis metrics
-    digest: 86b9e688ef0ddc6545fbc13c45e8bf017bda0390af9d186501199a13d4fcbc6a
-    home: https://github.com/oliver006/redis_exporter
-    keywords:
-    - prometheus
-    - redis
-    maintainers:
-    - email: arcadie.condrat@gmail.com
-      name: acondrat
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    name: prometheus-redis-exporter
-    sources:
-    - https://github.com/oliver006/redis_exporter
-    urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-redis-exporter-3.5.2/prometheus-redis-exporter-3.5.2.tgz
-    version: 3.5.2
-generated: "2020-09-07T16:16:43.30477718Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.4.0/prometheus-blackbox-exporter-4.4.0.tgz
+    version: 4.4.0
+generated: "2020-09-08T10:16:29.354667191Z"
