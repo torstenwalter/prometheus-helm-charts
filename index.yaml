@@ -1,27 +1,35 @@
 apiVersion: v1
 entries:
-  prometheus-blackbox-exporter:
+  prometheus:
   - apiVersion: v1
-    appVersion: 0.16.0
-    created: "2020-09-08T10:16:29.460959477Z"
-    description: Prometheus Blackbox Exporter
-    digest: ea1339d68720ee5d8186f7d5f24fbaa74958243051a066e101f5a701b8e30714
-    home: https://github.com/prometheus/blackbox_exporter
-    keywords:
-    - prometheus
-    - blackbox
-    - monitoring
+    appVersion: 2.20.1
+    created: "2020-09-08T13:16:43.738300288Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.8.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: 86b7e2b31a504ba6d9dccc35550855826986b12f63b4286893427c42533c8cfd
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     maintainers:
-    - email: cedric@desaintmartin.fr
-      name: desaintmartin
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: me@sota.sh
-      name: rsotnychenko
-    name: prometheus-blackbox-exporter
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: monotek23@gmail.com
+      name: monotek
+    name: prometheus
     sources:
-    - https://github.com/prometheus/blackbox_exporter
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.4.0/prometheus-blackbox-exporter-4.4.0.tgz
-    version: 4.4.0
-generated: "2020-09-08T10:16:29.354667191Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-11.14.0/prometheus-11.14.0.tgz
+    version: 11.14.0
+generated: "2020-09-08T13:16:43.2698472Z"
