@@ -1,48 +1,28 @@
 apiVersion: v1
 entries:
-  kube-prometheus-stack:
+  prometheus-cloudwatch-exporter:
   - apiVersion: v1
-    appVersion: 0.38.1
-    created: "2020-09-10T13:16:48.139176735Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://kubernetes-charts.storage.googleapis.com/
-      version: 2.8.*
-    - condition: nodeExporter.enabled
-      name: prometheus-node-exporter
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 1.11.*
-    - condition: grafana.enabled
-      name: grafana
-      repository: https://grafana.github.io/helm-charts
-      version: 5.6.*
-    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
-      and Prometheus rules combined with documentation and scripts to provide easy
-      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
-      Prometheus Operator.
-    digest: 36738755ba5c0813a2f9c7bb91a45479b5dd9381af00e6df42b5733e6363b1bd
-    home: https://github.com/prometheus-operator/kube-prometheus
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    appVersion: 0.8.0
+    created: "2020-09-10T22:16:28.136446226Z"
+    description: A Helm chart for prometheus cloudwatch-exporter
+    digest: b983b6392cea451ffc4567797f89122a2a35e6033df70e120a54dcdbc05aac33
+    home: https://github.com/prometheus/cloudwatch_exporter
     keywords:
-    - operator
+    - aws
+    - cloudwatch
     - prometheus
+    - exporter
     maintainers:
-    - name: vsliouniaev
-    - name: bismarck
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: github.gkarthiks@gmail.com
-      name: gkarthiks
-    - email: scott@r6by.com
-      name: scottrigby
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    name: kube-prometheus-stack
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: asher@asherfoa.com
+      name: asherf
+    name: prometheus-cloudwatch-exporter
     sources:
-    - https://github.com/prometheus-operator/kube-prometheus
-    - https://github.com/prometheus-operator/prometheus-operator
+    - https://github.com/prometheus/cloudwatch_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-9.4.0/kube-prometheus-stack-9.4.0.tgz
-    version: 9.4.0
-generated: "2020-09-10T13:16:47.916313979Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-cloudwatch-exporter-0.9.0/prometheus-cloudwatch-exporter-0.9.0.tgz
+    version: 0.9.0
+generated: "2020-09-10T22:16:28.029825386Z"
