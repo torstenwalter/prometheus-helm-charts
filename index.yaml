@@ -1,28 +1,24 @@
 apiVersion: v1
 entries:
-  prometheus-cloudwatch-exporter:
+  prometheus-redis-exporter:
   - apiVersion: v1
-    appVersion: 0.8.0
-    created: "2020-09-10T22:16:28.136446226Z"
-    description: A Helm chart for prometheus cloudwatch-exporter
-    digest: b983b6392cea451ffc4567797f89122a2a35e6033df70e120a54dcdbc05aac33
-    home: https://github.com/prometheus/cloudwatch_exporter
+    appVersion: 1.11.1
+    created: "2020-09-12T01:16:29.261366748Z"
+    description: Prometheus exporter for Redis metrics
+    digest: cffe92f1f12aef3f516abd35ca205283caf78795ba5a3d8470ad75318cb3063a
+    home: https://github.com/oliver006/redis_exporter
     keywords:
-    - aws
-    - cloudwatch
     - prometheus
-    - exporter
+    - redis
     maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: mail@torstenwalter.de
-      name: torstenwalter
-    - email: asher@asherfoa.com
-      name: asherf
-    name: prometheus-cloudwatch-exporter
+    - email: arcadie.condrat@gmail.com
+      name: acondrat
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    name: prometheus-redis-exporter
     sources:
-    - https://github.com/prometheus/cloudwatch_exporter
+    - https://github.com/oliver006/redis_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-cloudwatch-exporter-0.9.0/prometheus-cloudwatch-exporter-0.9.0.tgz
-    version: 0.9.0
-generated: "2020-09-10T22:16:28.029825386Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-redis-exporter-3.6.0/prometheus-redis-exporter-3.6.0.tgz
+    version: 3.6.0
+generated: "2020-09-12T01:16:29.149529509Z"
