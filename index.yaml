@@ -1,25 +1,56 @@
 apiVersion: v1
 entries:
-  prometheus-postgres-exporter:
-  - apiVersion: v1
-    appVersion: 0.8.0
-    created: "2020-09-17T01:16:40.944138442Z"
-    description: A Helm chart for prometheus postgres-exporter
-    digest: 52741ccf8291466165a7cc9bd24c250af04f4d29d523fd4d0bf5f162af8764b4
-    home: https://github.com/wrouesnel/postgres_exporter
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v1
+    appVersion: 0.38.1
+    created: "2020-09-21T20:24:16.4986446Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.8.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.11.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 5.6.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 64595df14e5980c3365c26acb88158d6f0e176dfbbccef504ac2fe78215bf5fe
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
-    - postgresql
+    - operator
     - prometheus
-    - exporter
+    - kube-prometheus
     maintainers:
+    - name: vsliouniaev
+    - name: bismarck
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    name: prometheus-postgres-exporter
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
     sources:
-    - https://github.com/wrouesnel/postgres_exporter
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-postgres-exporter-1.3.3/prometheus-postgres-exporter-1.3.3.tgz
-    version: 1.3.3
-generated: "2020-09-17T01:16:40.72100449Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-9.4.4/kube-prometheus-stack-9.4.4.tgz
+    version: 9.4.4
+generated: "2020-09-21T20:24:16.34594612Z"
