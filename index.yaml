@@ -1,29 +1,28 @@
 apiVersion: v1
 entries:
-  prometheus-blackbox-exporter:
+  prometheus-adapter:
   - apiVersion: v1
-    appVersion: 0.17.0
-    created: "2020-09-22T14:24:09.368782941Z"
-    description: Prometheus Blackbox Exporter
-    digest: eb0fe326add69f8b9bb144fde38ee5990842856757d11d64f0c5728a8dcb1af5
-    home: https://github.com/prometheus/blackbox_exporter
+    appVersion: v0.7.0
+    created: "2020-09-22T17:24:12.374786652Z"
+    description: A Helm chart for k8s prometheus adapter
+    digest: 94207b542d713af21234d2d7fdecfb3152e68e50d62f31fb379036b8876b2c89
+    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
     keywords:
+    - hpa
+    - metrics
     - prometheus
-    - blackbox
-    - monitoring
+    - adapter
     maintainers:
-    - email: cedric@desaintmartin.fr
-      name: desaintmartin
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: me@sota.sh
-      name: rsotnychenko
-    - email: monotek23@gmail.com
-      name: monotek
-    name: prometheus-blackbox-exporter
+    - email: mattias.gees@jetstack.io
+      name: mattiasgees
+    - name: steven-sheehy
+    - email: hfernandez@mesosphere.com
+      name: hectorj2f
+    name: prometheus-adapter
     sources:
-    - https://github.com/prometheus/blackbox_exporter
+    - https://github.com/kubernetes/charts
+    - https://github.com/DirectXMan12/k8s-prometheus-adapter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.6.0/prometheus-blackbox-exporter-4.6.0.tgz
-    version: 4.6.0
-generated: "2020-09-22T14:24:09.146745523Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-adapter-2.6.0/prometheus-adapter-2.6.0.tgz
+    version: 2.6.0
+generated: "2020-09-22T17:24:12.247342492Z"
