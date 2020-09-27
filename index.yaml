@@ -1,28 +1,22 @@
 apiVersion: v1
 entries:
-  prometheus-adapter:
-  - apiVersion: v1
-    appVersion: v0.7.0
-    created: "2020-09-25T20:24:13.087336057Z"
-    description: A Helm chart for k8s prometheus adapter
-    digest: 1f3c92db923ade4f9148f1128d215967fa5420b24b9292d40c2895f73fb13e90
-    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
-    keywords:
-    - hpa
-    - metrics
-    - prometheus
-    - adapter
+  alertmanager:
+  - apiVersion: v2
+    appVersion: v0.21.0
+    created: "2020-09-27T20:24:06.594374913Z"
+    description: The Alertmanager handles alerts sent by client applications such
+      as the Prometheus server.
+    digest: 3c9d32a1bc5ba0f5e0fd63e4d3929a522fb0547a85a046f54d8a4273ad1d8234
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     maintainers:
-    - email: mattias.gees@jetstack.io
-      name: mattiasgees
-    - name: steven-sheehy
-    - email: hfernandez@mesosphere.com
-      name: hectorj2f
-    name: prometheus-adapter
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: alertmanager
     sources:
-    - https://github.com/kubernetes/charts
-    - https://github.com/DirectXMan12/k8s-prometheus-adapter
+    - https://github.com/prometheus/alertmanager
+    type: application
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-adapter-2.7.0/prometheus-adapter-2.7.0.tgz
-    version: 2.7.0
-generated: "2020-09-25T20:24:12.902416989Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/alertmanager-0.1.0/alertmanager-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-09-27T20:24:06.498638507Z"
