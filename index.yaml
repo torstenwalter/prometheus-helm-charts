@@ -3,14 +3,14 @@ entries:
   prometheus:
   - apiVersion: v1
     appVersion: 2.21.0
-    created: "2020-10-05T20:24:33.325991149Z"
+    created: "2020-10-05T23:24:14.268064103Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
       repository: https://kubernetes-charts.storage.googleapis.com/
       version: 2.8.*
     description: Prometheus is a monitoring system and time series database.
-    digest: 1694b1ec05db9b0e2cfcd395931343537cadb89425e98ead6ad44c7ff6c4c289
+    digest: 1735b78d1dba4dc742115ffdb8920e2c15ec206dd2306042c4c5e09c12945a47
     home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     maintainers:
@@ -32,6 +32,6 @@ entries:
     - https://github.com/prometheus/node_exporter
     - https://github.com/kubernetes/kube-state-metrics
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-11.16.1/prometheus-11.16.1.tgz
-    version: 11.16.1
-generated: "2020-10-05T20:24:33.194947274Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-11.16.2/prometheus-11.16.2.tgz
+    version: 11.16.2
+generated: "2020-10-05T23:24:14.077047032Z"
