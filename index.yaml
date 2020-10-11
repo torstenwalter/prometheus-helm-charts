@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v1
     appVersion: 0.42.1
-    created: "2020-10-09T20:24:29.54123362Z"
+    created: "2020-10-11T20:24:22.588439809Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -23,12 +23,12 @@ entries:
     - condition: grafana.enabled
       name: grafana
       repository: https://grafana.github.io/helm-charts
-      version: 5.6.*
+      version: 5.7.*
     description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: fb1410d775a2108c8c7ba9a751fe6ec96c69265da640afd6f492683ab9cf27bf
+    digest: 98b42d916fb66b7b994c94278a7ee0d28327d02eef5e915587ffc6968929e07a
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -52,6 +52,24 @@ entries:
     - https://github.com/prometheus-community/helm-charts
     - https://github.com/prometheus-operator/kube-prometheus
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-10.0.1/kube-prometheus-stack-10.0.1.tgz
-    version: 10.0.1
-generated: "2020-10-09T20:24:29.323094081Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-10.0.2/kube-prometheus-stack-10.0.2.tgz
+    version: 10.0.2
+  prometheus-mysql-exporter:
+  - apiVersion: v1
+    appVersion: v0.12.1
+    created: "2020-10-11T20:24:22.841639627Z"
+    description: A Helm chart for prometheus mysql exporter with cloudsqlproxy
+    digest: 4b0b46fee80d1f589006f2695d4027e769eee433f83719108736d8baa5bb691f
+    home: https://github.com/prometheus/mysqld_exporter
+    maintainers:
+    - email: juan.chimienti@gmail.com
+      name: juanchimienti
+    - email: monotek23@gmail.com
+      name: monotek
+    name: prometheus-mysql-exporter
+    sources:
+    - https://github.com/prometheus/mysqld_exporter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-mysql-exporter-1.0.0/prometheus-mysql-exporter-1.0.0.tgz
+    version: 1.0.0
+generated: "2020-10-11T20:24:21.865108044Z"
