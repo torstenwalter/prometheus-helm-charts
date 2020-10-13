@@ -1,67 +1,57 @@
 apiVersion: v1
 entries:
-  prometheus-druid-exporter:
-  - annotations:
-      artifacthub.io/links: |
-        - name: Chart Source
-          url: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-druid-exporter
-      artifacthub.io/operator: "true"
-    apiVersion: v1
-    appVersion: v0.8.0
-    created: "2020-10-11T23:24:14.381154705Z"
-    description: Druid exporter to monitor druid metrics with Prometheus
-    digest: b5f69a97e897c5e9b22858b0f080da6197fdb49df6b6cd63dcc94525a94b3372
-    home: https://github.com/opstree/druid-exporter
-    icon: https://github.com/opstree/druid-exporter/blob/master/static/druid-exporter-logo.svg
-    keywords:
-    - kubernetes
-    - apache
-    - druid
-    - exporter
-    - prometheus
-    - grafana
-    maintainers:
-    - email: abhishekbhardwaj510@gmail.com
-      name: iamabhishek-dubey
-    - email: sandeep@opstree.com
-      name: sandy724
-    name: prometheus-druid-exporter
-    sources:
-    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-druid-exporter
-    urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-druid-exporter-0.8.0/prometheus-druid-exporter-0.8.0.tgz
-    version: 0.8.0
-  prometheus-pingdom-exporter:
+  kube-prometheus-stack:
   - annotations:
       artifacthub.io/links: |
         - name: Chart Source
           url: https://github.com/prometheus-community/helm-charts
-      artifacthub.io/maintainers: |
-        - name: monotek
-          email: monotek23@gmail.com
-        - name: rpahli
-          email: pahli88@googlemail.com
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
     apiVersion: v1
-    appVersion: 20190610-1
-    created: "2020-10-11T23:24:14.481349037Z"
-    description: A Helm chart for Prometheus Pingdom Exporter
-    digest: cd7ce3f3bcb1901db262ee7265aa392bed6fd9a3283df2c90497d07f2f63f6fd
-    home: https://github.com/giantswarm/prometheus-pingdom-exporter
-    icon: https://raw.githubusercontent.com/cncf/artwork/master/prometheus/icon/color/prometheus-icon-color.svg
+    appVersion: 0.42.1
+    created: "2020-10-13T20:24:32.903158356Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.8.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.11.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 5.7.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: a2afd4c1b9c5c83710a3637be604ad9fa349af497960f79aa7417ed5b3ddb38e
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
+    - operator
     - prometheus
-    - pingdom
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
     maintainers:
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: pahli88@googlemail.com
-      name: rpahli
-    name: prometheus-pingdom-exporter
+    - name: vsliouniaev
+    - name: bismarck
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
     sources:
-    - https://github.com/giantswarm/prometheus-pingdom-exporter
-    - https://github.com/camptocamp/prometheus-pingdom-exporter
     - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-pingdom-exporter-2.3.0/prometheus-pingdom-exporter-2.3.0.tgz
-    version: 2.3.0
-generated: "2020-10-11T23:24:14.253772662Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-10.1.0/kube-prometheus-stack-10.1.0.tgz
+    version: 10.1.0
+generated: "2020-10-13T20:24:32.760794294Z"
