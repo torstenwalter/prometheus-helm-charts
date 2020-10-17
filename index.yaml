@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   prometheus-blackbox-exporter:
   - apiVersion: v1
-    appVersion: 0.17.0
-    created: "2020-10-16T11:24:12.209032908Z"
+    appVersion: 0.18.0
+    created: "2020-10-17T08:24:18.097351933Z"
     description: Prometheus Blackbox Exporter
-    digest: e702c4f7720f614e9950702ac227479ab25dbd00a67be3bfaedba45a80178066
+    digest: 5a5a7b247bdcd355f164269bfdf194f5a1e999519c6a8968f138665220264879
     home: https://github.com/prometheus/blackbox_exporter
     keywords:
     - prometheus
@@ -24,6 +24,6 @@ entries:
     sources:
     - https://github.com/prometheus/blackbox_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.8.0/prometheus-blackbox-exporter-4.8.0.tgz
-    version: 4.8.0
-generated: "2020-10-16T11:24:12.049193915Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.9.0/prometheus-blackbox-exporter-4.9.0.tgz
+    version: 4.9.0
+generated: "2020-10-17T08:24:17.991925466Z"
