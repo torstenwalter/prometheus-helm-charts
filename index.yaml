@@ -3,9 +3,9 @@ entries:
   prometheus-blackbox-exporter:
   - apiVersion: v1
     appVersion: 0.18.0
-    created: "2020-10-17T08:24:18.097351933Z"
+    created: "2020-10-18T17:24:18.380982009Z"
     description: Prometheus Blackbox Exporter
-    digest: 5a5a7b247bdcd355f164269bfdf194f5a1e999519c6a8968f138665220264879
+    digest: df2b1c0ece9fc62db3a6eab1bdb984034c3f91c6d39ac79450a6b8bfa5672d1c
     home: https://github.com/prometheus/blackbox_exporter
     keywords:
     - prometheus
@@ -24,6 +24,32 @@ entries:
     sources:
     - https://github.com/prometheus/blackbox_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.9.0/prometheus-blackbox-exporter-4.9.0.tgz
-    version: 4.9.0
-generated: "2020-10-17T08:24:17.991925466Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.9.1/prometheus-blackbox-exporter-4.9.1.tgz
+    version: 4.9.1
+  prometheus-kafka-exporter:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-kafka-exporter
+    apiVersion: v1
+    appVersion: v1.2.0
+    created: "2020-10-18T17:24:18.470329983Z"
+    description: A Helm chart to export the metrics from Kafka in Prometheus format
+      using the kafka-exporter from https://github.com/danielqsj/kafka_exporter
+    digest: c45eb760dc26a19d1f63aa2370b4cdd85424744709ad418182482f338eb4fd9a
+    home: https://github.com/danielqsj/kafka_exporter
+    keywords:
+    - prometheus
+    - kafka
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: golgoth31@notrenet.com
+      name: golgoth31
+    name: prometheus-kafka-exporter
+    sources:
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-kafka-exporter-0.1.4/prometheus-kafka-exporter-0.1.4.tgz
+    version: 0.1.4
+generated: "2020-10-18T17:24:18.248763643Z"
