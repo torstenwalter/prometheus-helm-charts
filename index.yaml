@@ -1,5 +1,24 @@
 apiVersion: v1
 entries:
+  alertmanager:
+  - apiVersion: v2
+    appVersion: v0.21.0
+    created: "2020-10-22T18:01:56.620747784Z"
+    description: The Alertmanager handles alerts sent by client applications such
+      as the Prometheus server.
+    digest: 1a3c58feef7a3cbabe1f89c4b77834316afef05499ee7ec58fffdbd5d9a2522d
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: alertmanager
+    sources:
+    - https://github.com/prometheus/alertmanager
+    type: application
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/alertmanager-0.1.3/alertmanager-0.1.3.tgz
+    version: 0.1.3
   kube-prometheus-stack:
   - annotations:
       artifacthub.io/links: |
@@ -10,7 +29,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v1
     appVersion: 0.42.1
-    created: "2020-10-21T20:24:21.512456547Z"
+    created: "2020-10-22T18:01:56.790850241Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +47,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: 67f4d4dfab5755e4200f22cad0a911ef0968539ab84ad43a6845f4e48891727e
+    digest: d6796df381ac5b11a8dd251613304e333e1428e92bacd3aed501bc87fefd99e5
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -52,6 +71,40 @@ entries:
     - https://github.com/prometheus-community/helm-charts
     - https://github.com/prometheus-operator/kube-prometheus
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-10.1.1/kube-prometheus-stack-10.1.1.tgz
-    version: 10.1.1
-generated: "2020-10-21T20:24:21.34698008Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-10.1.2/kube-prometheus-stack-10.1.2.tgz
+    version: 10.1.2
+  prometheus:
+  - apiVersion: v1
+    appVersion: 2.21.0
+    created: "2020-10-22T18:01:56.928140433Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.8.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: a692794f68f8068bae96f02683e02587cab2b8619de47e818b1d8b184123c7f5
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-11.16.4/prometheus-11.16.4.tgz
+    version: 11.16.4
+generated: "2020-10-22T18:01:56.495712954Z"
