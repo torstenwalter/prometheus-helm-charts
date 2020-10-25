@@ -1,37 +1,29 @@
 apiVersion: v1
 entries:
-  prometheus:
+  prometheus-blackbox-exporter:
   - apiVersion: v1
-    appVersion: 2.21.0
-    created: "2020-10-24T20:24:10.739429434Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://kubernetes-charts.storage.googleapis.com/
-      version: 2.8.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 82eabd61f054c2d2e660de3c51fb802931f9b65ffc169ff23b37448ef247f2ad
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    appVersion: 0.18.0
+    created: "2020-10-25T20:24:19.913552832Z"
+    description: Prometheus Blackbox Exporter
+    digest: 1d8bdfb4b6f9c8c3bcb493bb13f59c106d2215c42715b017856eabddac083eb1
+    home: https://github.com/prometheus/blackbox_exporter
+    keywords:
+    - prometheus
+    - blackbox
+    - monitoring
     maintainers:
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
+    - email: me@sota.sh
+      name: rsotnychenko
     - email: monotek23@gmail.com
       name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: prometheus
+    name: prometheus-blackbox-exporter
     sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
+    - https://github.com/prometheus/blackbox_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-11.16.5/prometheus-11.16.5.tgz
-    version: 11.16.5
-generated: "2020-10-24T20:24:10.624850482Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.10.0/prometheus-blackbox-exporter-4.10.0.tgz
+    version: 4.10.0
+generated: "2020-10-25T20:24:19.429249014Z"
