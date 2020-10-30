@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v1
     appVersion: 0.42.1
-    created: "2020-10-30T02:24:34.457247666Z"
+    created: "2020-10-30T17:45:57.617952262Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: 938039fab127e3ceb9d677f986fb877f8fce5ab890dad91596f6bac4a8a5c50e
+    digest: 21baf1613546f5ed55c27e9cddef16b2c9bec094348893a7bc9ded41ae4b2461
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -52,6 +52,27 @@ entries:
     - https://github.com/prometheus-community/helm-charts
     - https://github.com/prometheus-operator/kube-prometheus
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-10.3.2/kube-prometheus-stack-10.3.2.tgz
-    version: 10.3.2
-generated: "2020-10-30T02:24:34.304934128Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-10.3.3/kube-prometheus-stack-10.3.3.tgz
+    version: 10.3.3
+  prometheus-node-exporter:
+  - apiVersion: v1
+    appVersion: 1.0.1
+    created: "2020-10-30T17:45:57.736060585Z"
+    description: A Helm chart for prometheus node-exporter
+    digest: cc0d3a4a0074205b44a8cc6feab1dfc4c76c817c42e4b64624944875a9f7c80b
+    home: https://github.com/prometheus/node_exporter/
+    keywords:
+    - node-exporter
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - name: vsliouniaev
+    name: prometheus-node-exporter
+    sources:
+    - https://github.com/prometheus/node_exporter/
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-node-exporter-1.12.0/prometheus-node-exporter-1.12.0.tgz
+    version: 1.12.0
+generated: "2020-10-30T17:45:57.40482968Z"
