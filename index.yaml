@@ -1,24 +1,57 @@
 apiVersion: v1
 entries:
-  prometheus-pushgateway:
-  - apiVersion: v1
-    appVersion: 1.3.0
-    created: "2020-11-04T18:23:02.104803699Z"
-    description: A Helm chart for prometheus pushgateway
-    digest: 0203dfea3cf9ca67efbae1a7069b1f40c525c24a885ed5520899a8893bbb131a
-    home: https://github.com/prometheus/pushgateway
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v1
+    appVersion: 0.43.1
+    created: "2020-11-05T17:19:08.239013441Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://charts.helm.sh/stable
+      version: 2.9.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.12.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 5.8.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 21bd201dfb20ba6965a5e09a3a5f32214e27c8c4713d82d753c8909bb363b49f
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
-    - pushgateway
+    - operator
     - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
     maintainers:
+    - name: vsliouniaev
+    - name: bismarck
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: christian.staude@staffbase.com
-      name: cstaud
-    name: prometheus-pushgateway
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
     sources:
-    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-pushgateway-1.5.0/prometheus-pushgateway-1.5.0.tgz
-    version: 1.5.0
-generated: "2020-11-04T18:23:01.970547604Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-11.0.1/kube-prometheus-stack-11.0.1.tgz
+    version: 11.0.1
+generated: "2020-11-05T17:19:08.074558751Z"
