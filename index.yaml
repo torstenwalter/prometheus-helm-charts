@@ -1,37 +1,28 @@
 apiVersion: v1
 entries:
-  prometheus:
+  prometheus-adapter:
   - apiVersion: v1
-    appVersion: 2.21.0
-    created: "2020-11-14T11:37:37.189027899Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://charts.helm.sh/stable/
-      version: 2.8.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 1187fb8654098a9a266de1221825f44891ccc44925358658fc42632cb2ba6b2a
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    appVersion: v0.7.0
+    created: "2020-11-14T15:37:31.556268358Z"
+    description: A Helm chart for k8s prometheus adapter
+    digest: cea109501643da2886f4da864572d0cda36c5086fbe7faa1b44dc9355e343638
+    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
+    keywords:
+    - hpa
+    - metrics
+    - prometheus
+    - adapter
     maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: prometheus
+    - email: mattias.gees@jetstack.io
+      name: mattiasgees
+    - name: steven-sheehy
+    - email: hfernandez@mesosphere.com
+      name: hectorj2f
+    name: prometheus-adapter
     sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
+    - https://github.com/kubernetes/charts
+    - https://github.com/DirectXMan12/k8s-prometheus-adapter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-11.16.9/prometheus-11.16.9.tgz
-    version: 11.16.9
-generated: "2020-11-14T11:37:37.060108467Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-adapter-2.7.1/prometheus-adapter-2.7.1.tgz
+    version: 2.7.1
+generated: "2020-11-14T15:37:31.432876442Z"
