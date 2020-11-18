@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.43.2
-    created: "2020-11-17T15:37:53.649480148Z"
+    created: "2020-11-18T11:37:45.42651157Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: 1cd3b67a72ba3014209d0d0bb23db6fab373855724bfdb610c0a211d3816bd7a
+    digest: fcd73976fd4271e19c78a98b2e629feb7cf21214f5911f98fbf2e9bc72e40462
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -53,6 +53,91 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.0.1/kube-prometheus-stack-12.0.1.tgz
-    version: 12.0.1
-generated: "2020-11-17T15:37:53.474371894Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.0.2/kube-prometheus-stack-12.0.2.tgz
+    version: 12.0.2
+  prometheus-consul-exporter:
+  - apiVersion: v1
+    appVersion: 0.4.0
+    created: "2020-11-18T11:37:45.533814749Z"
+    description: A Helm chart for the Prometheus Consul Exporter
+    digest: 599a35b125a45af5ddcb673895eee3c623f5ae6254db13725d07113e8a6330b2
+    home: https://github.com/prometheus/consul_exporter
+    keywords:
+    - metrics
+    - consul
+    - monitoring
+    maintainers:
+    - email: 8890118+timm088@users.noreply.github.com
+      name: timm088
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: prometheus-consul-exporter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-consul-exporter-0.3.0/prometheus-consul-exporter-0.3.0.tgz
+    version: 0.3.0
+  prometheus-couchdb-exporter:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-11-18T11:37:45.627684391Z"
+    description: A Helm chart to export the metrics from couchdb in Prometheus format.
+    digest: 11aa8ab4eb3943a7c8be8d0a0449248153540b1bdeaa558756c52e96e9d42182
+    home: https://github.com/gesellix/couchdb-prometheus-exporter
+    keywords:
+    - couchdb-exporter
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: prometheus-couchdb-exporter
+    sources:
+    - https://github.com/gesellix/couchdb-prometheus-exporter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-couchdb-exporter-0.2.0/prometheus-couchdb-exporter-0.2.0.tgz
+    version: 0.2.0
+  prometheus-kafka-exporter:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-kafka-exporter
+    apiVersion: v1
+    appVersion: v1.2.0
+    created: "2020-11-18T11:37:45.736742579Z"
+    description: A Helm chart to export the metrics from Kafka in Prometheus format
+      using the kafka-exporter from https://github.com/danielqsj/kafka_exporter
+    digest: d624d0acb72de60fc0ddb9f14815710754416dfdb2875fa2183550d2bee0a69c
+    home: https://github.com/danielqsj/kafka_exporter
+    keywords:
+    - prometheus
+    - kafka
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: golgoth31@notrenet.com
+      name: golgoth31
+    name: prometheus-kafka-exporter
+    sources:
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-kafka-exporter-0.1.5/prometheus-kafka-exporter-0.1.5.tgz
+    version: 0.1.5
+  prometheus-redis-exporter:
+  - apiVersion: v1
+    appVersion: 1.11.1
+    created: "2020-11-18T11:37:45.85451531Z"
+    description: Prometheus exporter for Redis metrics
+    digest: 0c3a090a57cd7b60983437f09b1454ca42153092c515df0475c8a032f0a79378
+    home: https://github.com/oliver006/redis_exporter
+    keywords:
+    - prometheus
+    - redis
+    maintainers:
+    - email: arcadie.condrat@gmail.com
+      name: acondrat
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    name: prometheus-redis-exporter
+    sources:
+    - https://github.com/oliver006/redis_exporter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-redis-exporter-3.7.0/prometheus-redis-exporter-3.7.0.tgz
+    version: 3.7.0
+generated: "2020-11-18T11:37:45.277915521Z"
