@@ -1,29 +1,29 @@
 apiVersion: v1
 entries:
-  prometheus-kafka-exporter:
-  - annotations:
-      artifacthub.io/links: |
-        - name: Chart Source
-          url: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-kafka-exporter
-    apiVersion: v1
-    appVersion: v1.2.0
-    created: "2020-11-18T23:37:34.579770179Z"
-    description: A Helm chart to export the metrics from Kafka in Prometheus format
-      using the kafka-exporter from https://github.com/danielqsj/kafka_exporter
-    digest: 3b6d11f274781d84131059a891ab286825ea3f52dcaa02f390e1ea9a03a11429
-    home: https://github.com/danielqsj/kafka_exporter
+  prometheus-blackbox-exporter:
+  - apiVersion: v1
+    appVersion: 0.18.0
+    created: "2020-11-19T11:37:24.849285907Z"
+    description: Prometheus Blackbox Exporter
+    digest: b548f1e5558f52f0467dadcd8bfa3bd76c11b69967d154f7f299ad85b2d67824
+    home: https://github.com/prometheus/blackbox_exporter
     keywords:
     - prometheus
-    - kafka
+    - blackbox
+    - monitoring
     maintainers:
-    - email: github.gkarthiks@gmail.com
-      name: gkarthiks
-    - email: golgoth31@notrenet.com
-      name: golgoth31
-    name: prometheus-kafka-exporter
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: me@sota.sh
+      name: rsotnychenko
+    - email: monotek23@gmail.com
+      name: monotek
+    name: prometheus-blackbox-exporter
     sources:
-    - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter
+    - https://github.com/prometheus/blackbox_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-kafka-exporter-0.2.0/prometheus-kafka-exporter-0.2.0.tgz
-    version: 0.2.0
-generated: "2020-11-18T23:37:34.480609298Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-blackbox-exporter-4.10.1/prometheus-blackbox-exporter-4.10.1.tgz
+    version: 4.10.1
+generated: "2020-11-19T11:37:24.724539552Z"
