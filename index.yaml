@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.43.2
-    created: "2020-11-23T11:37:40.160566863Z"
+    created: "2020-11-23T19:38:35.61918083Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: f10c2aa6691c66bf322deeea91704e101d17827c7a3151567f6307ec67bc6ccb
+    digest: 1d893f705fcad61f5e05c48427e0135d4a188d01c0a56371853eb970054cb644
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -53,28 +53,6 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.2.1/kube-prometheus-stack-12.2.1.tgz
-    version: 12.2.1
-  prometheus-redis-exporter:
-  - apiVersion: v2
-    appVersion: 1.11.1
-    created: "2020-11-23T11:37:40.280414728Z"
-    description: Prometheus exporter for Redis metrics
-    digest: 408d270032bb88751c5d92dbbab5713802a7f0b1c6ffd7ff7d402ab699c14495
-    home: https://github.com/oliver006/redis_exporter
-    keywords:
-    - prometheus
-    - redis
-    maintainers:
-    - email: arcadie.condrat@gmail.com
-      name: acondrat
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    name: prometheus-redis-exporter
-    sources:
-    - https://github.com/oliver006/redis_exporter
-    type: application
-    urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-redis-exporter-4.0.0/prometheus-redis-exporter-4.0.0.tgz
-    version: 4.0.0
-generated: "2020-11-23T11:37:39.990810255Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.2.2/kube-prometheus-stack-12.2.2.tgz
+    version: 12.2.2
+generated: "2020-11-23T19:38:35.407077329Z"
