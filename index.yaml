@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.44.0
-    created: "2020-12-07T11:42:13.703453977Z"
+    created: "2020-12-07T23:18:51.65819525Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: 16ceba802ab5d27aa9c37bfddab0c0d3baa7f541924bd79a0c8e2dc509a0b314
+    digest: 099def344746c479621d7aa4b165e40136cce97dcb855f1bc4768e25ed16beb4
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -53,6 +53,31 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.5.0/kube-prometheus-stack-12.5.0.tgz
-    version: 12.5.0
-generated: "2020-12-07T11:42:13.559611205Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.6.0/kube-prometheus-stack-12.6.0.tgz
+    version: 12.6.0
+  prometheus-adapter:
+  - apiVersion: v1
+    appVersion: v0.8.2
+    created: "2020-12-07T23:18:51.897606604Z"
+    description: A Helm chart for k8s prometheus adapter
+    digest: 631fb008cec3933c12f0c2dff69c1161bcabb2265b36683d70e46b92646456b4
+    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
+    keywords:
+    - hpa
+    - metrics
+    - prometheus
+    - adapter
+    maintainers:
+    - email: mattias.gees@jetstack.io
+      name: mattiasgees
+    - name: steven-sheehy
+    - email: hfernandez@mesosphere.com
+      name: hectorj2f
+    name: prometheus-adapter
+    sources:
+    - https://github.com/kubernetes/charts
+    - https://github.com/DirectXMan12/k8s-prometheus-adapter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-adapter-2.9.0/prometheus-adapter-2.9.0.tgz
+    version: 2.9.0
+generated: "2020-12-07T23:18:51.431627305Z"
