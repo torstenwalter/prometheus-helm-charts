@@ -1,24 +1,28 @@
 apiVersion: v1
 entries:
-  prometheus-pushgateway:
+  prometheus-cloudwatch-exporter:
   - apiVersion: v1
-    appVersion: 1.3.0
-    created: "2020-12-18T16:19:14.002765796Z"
-    description: A Helm chart for prometheus pushgateway
-    digest: 68caa7cfa7d73bd64370353d2d4a298316c2d45fc2c223da6eaf902ae6e732e3
-    home: https://github.com/prometheus/pushgateway
+    appVersion: 0.8.0
+    created: "2020-12-20T23:12:20.323780817Z"
+    description: A Helm chart for prometheus cloudwatch-exporter
+    digest: fdf9b76a31ec7a8585618105ccb4b6b4fd50c665687309e4e31b594dee83f6c3
+    home: https://github.com/prometheus/cloudwatch_exporter
     keywords:
-    - pushgateway
+    - aws
+    - cloudwatch
     - prometheus
+    - exporter
     maintainers:
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: christian.staude@staffbase.com
-      name: cstaud
-    name: prometheus-pushgateway
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: asher@asherfoa.com
+      name: asherf
+    name: prometheus-cloudwatch-exporter
     sources:
-    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/cloudwatch_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-pushgateway-1.5.1/prometheus-pushgateway-1.5.1.tgz
-    version: 1.5.1
-generated: "2020-12-18T16:19:13.759262657Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-cloudwatch-exporter-0.12.1/prometheus-cloudwatch-exporter-0.12.1.tgz
+    version: 0.12.1
+generated: "2020-12-20T23:12:20.196528274Z"
