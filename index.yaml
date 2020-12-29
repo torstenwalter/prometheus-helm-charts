@@ -1,58 +1,60 @@
 apiVersion: v1
 entries:
-  kube-prometheus-stack:
-  - annotations:
-      artifacthub.io/links: |
-        - name: Chart Source
-          url: https://github.com/prometheus-community/helm-charts
-        - name: Upstream Project
-          url: https://github.com/prometheus-operator/kube-prometheus
-      artifacthub.io/operator: "true"
-    apiVersion: v2
-    appVersion: 0.44.0
-    created: "2020-12-22T19:54:43.149699364Z"
+  prometheus:
+  - apiVersion: v2
+    appVersion: 2.22.1
+    created: "2020-12-29T19:10:00.595751407Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
-      repository: https://charts.helm.sh/stable
-      version: 2.9.*
-    - condition: nodeExporter.enabled
-      name: prometheus-node-exporter
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 1.12.*
-    - condition: grafana.enabled
-      name: grafana
-      repository: https://grafana.github.io/helm-charts
-      version: 5.8.*
-    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
-      and Prometheus rules combined with documentation and scripts to provide easy
-      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
-      Prometheus Operator.
-    digest: 883f8b5388194b7a777df330940c7200b0bb6a5aa182292b0d79e5fc301d403b
-    home: https://github.com/prometheus-operator/kube-prometheus
+      repository: https://charts.helm.sh/stable/
+      version: 2.8.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: 0efddd033d61e83835735285bd3e34b667018c6dceb8214bdf5ba2da98036564
+    home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    keywords:
-    - operator
-    - prometheus
-    - kube-prometheus
-    kubeVersion: '>=1.16.0-0'
     maintainers:
-    - name: vsliouniaev
-    - name: bismarck
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: github.gkarthiks@gmail.com
-      name: gkarthiks
-    - email: scott@r6by.com
-      name: scottrigby
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
     - email: miroslav.hadzhiev@gmail.com
       name: Xtigyro
-    name: kube-prometheus-stack
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
     sources:
-    - https://github.com/prometheus-community/helm-charts
-    - https://github.com/prometheus-operator/kube-prometheus
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
     type: application
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.8.1/kube-prometheus-stack-12.8.1.tgz
-    version: 12.8.1
-generated: "2020-12-22T19:54:42.936258254Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-13.0.2/prometheus-13.0.2.tgz
+    version: 13.0.2
+  prometheus-stackdriver-exporter:
+  - apiVersion: v1
+    appVersion: 0.6.0
+    created: "2020-12-29T19:10:00.68468733Z"
+    description: Stackdriver exporter for Prometheus
+    digest: 4439a6e798b17f9f56a262fafa74c5c55de578ef899c3a258acd6dd57b1178c3
+    home: https://www.stackdriver.com/
+    keywords:
+    - metrics
+    - stackdriver
+    - monitoring
+    maintainers:
+    - email: apenney@gmail.com
+      name: apenney
+    - email: pahli88@googlemail.com
+      name: rpahli
+    name: prometheus-stackdriver-exporter
+    sources:
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-stackdriver_exporter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-stackdriver-exporter-1.6.0/prometheus-stackdriver-exporter-1.6.0.tgz
+    version: 1.6.0
+generated: "2020-12-29T19:10:00.469544148Z"
