@@ -1,76 +1,63 @@
 apiVersion: v1
 entries:
-  kube-prometheus-stack:
-  - annotations:
-      artifacthub.io/links: |
-        - name: Chart Source
-          url: https://github.com/prometheus-community/helm-charts
-        - name: Upstream Project
-          url: https://github.com/prometheus-operator/kube-prometheus
-      artifacthub.io/operator: "true"
-    apiVersion: v2
-    appVersion: 0.44.0
-    created: "2021-01-13T18:52:49.972032606Z"
+  prometheus:
+  - apiVersion: v2
+    appVersion: 2.24.0
+    created: "2021-01-14T16:23:55.505155125Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
-      repository: https://charts.helm.sh/stable
+      repository: https://kubernetes.github.io/kube-state-metrics
       version: 2.9.*
-    - condition: nodeExporter.enabled
-      name: prometheus-node-exporter
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 1.12.*
-    - condition: grafana.enabled
-      name: grafana
-      repository: https://grafana.github.io/helm-charts
-      version: 6.1.*
-    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
-      and Prometheus rules combined with documentation and scripts to provide easy
-      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
-      Prometheus Operator.
-    digest: 12a916b1384227aa701161c38a9c79e96f567ae7d0da57edc2e56153123d29ac
-    home: https://github.com/prometheus-operator/kube-prometheus
+    description: Prometheus is a monitoring system and time series database.
+    digest: 6eab519977952f74485ac5da2594903567111a96cf9911af6e62d913521b0f44
+    home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    keywords:
-    - operator
-    - prometheus
-    - kube-prometheus
-    kubeVersion: '>=1.16.0-0'
     maintainers:
-    - name: vsliouniaev
-    - name: bismarck
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: github.gkarthiks@gmail.com
-      name: gkarthiks
-    - email: scott@r6by.com
-      name: scottrigby
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
     - email: miroslav.hadzhiev@gmail.com
       name: Xtigyro
-    name: kube-prometheus-stack
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
     sources:
-    - https://github.com/prometheus-community/helm-charts
-    - https://github.com/prometheus-operator/kube-prometheus
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
     type: application
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.12.0/kube-prometheus-stack-12.12.0.tgz
-    version: 12.12.0
-  prometheus-rabbitmq-exporter:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-13.2.1/prometheus-13.2.1.tgz
+    version: 13.2.1
+  prometheus-cloudwatch-exporter:
   - apiVersion: v1
-    appVersion: v0.29.0
-    created: "2021-01-13T18:52:50.094171959Z"
-    description: Rabbitmq metrics exporter for prometheus
-    digest: c9a65a2113ed936ad1328e7e2c69b4a80e4d853ffd4fcfecb039fc6e0c0a52e2
-    home: https://github.com/kbudde/rabbitmq_exporter
+    appVersion: 0.8.0
+    created: "2021-01-14T16:23:55.633267877Z"
+    description: A Helm chart for prometheus cloudwatch-exporter
+    digest: c68c6daa8ecb6aa63729b397a98e4116c948cd4f4fc3316d18da3ef9e2a52a29
+    home: https://github.com/prometheus/cloudwatch_exporter
+    keywords:
+    - aws
+    - cloudwatch
+    - prometheus
+    - exporter
     maintainers:
-    - email: juan.chimienti@gmail.com
-      name: juanchimienti
-    - email: abhishekbhardwaj510@gmail.com
-      name: iamabhishek-dubey
-    name: prometheus-rabbitmq-exporter
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: asher@asherfoa.com
+      name: asherf
+    name: prometheus-cloudwatch-exporter
     sources:
-    - https://github.com/kbudde/rabbitmq_exporter
+    - https://github.com/prometheus/cloudwatch_exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-rabbitmq-exporter-0.5.7/prometheus-rabbitmq-exporter-0.5.7.tgz
-    version: 0.5.7
-generated: "2021-01-13T18:52:49.816447344Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-cloudwatch-exporter-0.13.0/prometheus-cloudwatch-exporter-0.13.0.tgz
+    version: 0.13.0
+generated: "2021-01-14T16:23:55.364272448Z"
