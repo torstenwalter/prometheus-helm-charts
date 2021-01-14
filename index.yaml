@@ -1,63 +1,58 @@
 apiVersion: v1
 entries:
-  prometheus:
-  - apiVersion: v2
-    appVersion: 2.24.0
-    created: "2021-01-14T16:23:55.505155125Z"
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: 0.44.0
+    created: "2021-01-14T19:00:32.370053061Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
       repository: https://kubernetes.github.io/kube-state-metrics
       version: 2.9.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 6eab519977952f74485ac5da2594903567111a96cf9911af6e62d913521b0f44
-    home: https://prometheus.io/
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.12.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.1.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: efd01900347e4b445fb8788b9afe6627d5ca8ae1286e5344b79d23e79cd1818a
+    home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
     maintainers:
+    - name: vsliouniaev
+    - name: bismarck
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
     - email: miroslav.hadzhiev@gmail.com
       name: Xtigyro
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: prometheus
+    name: kube-prometheus-stack
     sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-13.2.1/prometheus-13.2.1.tgz
-    version: 13.2.1
-  prometheus-cloudwatch-exporter:
-  - apiVersion: v1
-    appVersion: 0.8.0
-    created: "2021-01-14T16:23:55.633267877Z"
-    description: A Helm chart for prometheus cloudwatch-exporter
-    digest: c68c6daa8ecb6aa63729b397a98e4116c948cd4f4fc3316d18da3ef9e2a52a29
-    home: https://github.com/prometheus/cloudwatch_exporter
-    keywords:
-    - aws
-    - cloudwatch
-    - prometheus
-    - exporter
-    maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: mail@torstenwalter.de
-      name: torstenwalter
-    - email: asher@asherfoa.com
-      name: asherf
-    name: prometheus-cloudwatch-exporter
-    sources:
-    - https://github.com/prometheus/cloudwatch_exporter
-    urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-cloudwatch-exporter-0.13.0/prometheus-cloudwatch-exporter-0.13.0.tgz
-    version: 0.13.0
-generated: "2021-01-14T16:23:55.364272448Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-12.12.1/kube-prometheus-stack-12.12.1.tgz
+    version: 12.12.1
+generated: "2021-01-14T19:00:32.140251784Z"
