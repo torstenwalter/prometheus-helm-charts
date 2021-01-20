@@ -1,20 +1,139 @@
 apiVersion: v1
 entries:
-  prometheus-to-sd:
-  - apiVersion: v1
-    appVersion: 0.5.2
-    created: "2021-01-20T13:39:06.305238571Z"
-    description: Scrape metrics stored in prometheus format and push them to the Stackdriver
-    digest: 03d8cd85f771bd477c591155043efb6a2da2f147b3e6f283c3d4882081f49618
-    home: https://github.com/GoogleCloudPlatform/k8s-stackdriver/tree/master/prometheus-to-sd
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: 0.45.0
+    created: "2021-01-20T22:54:03.450582871Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes.github.io/kube-state-metrics
+      version: 2.9.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.12.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.1.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: e59f256fe71df464d118ca74496e0dc289e6214a37b01c475bb4314ab86b13ab
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: vsliouniaev
+    - name: bismarck
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/kube-prometheus-stack-13.1.1/kube-prometheus-stack-13.1.1.tgz
+    version: 13.1.1
+  prometheus-kafka-exporter:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-kafka-exporter
+    apiVersion: v1
+    appVersion: v1.2.0
+    created: "2021-01-20T22:54:03.68547211Z"
+    description: A Helm chart to export the metrics from Kafka in Prometheus format
+      using the kafka-exporter from https://github.com/danielqsj/kafka_exporter
+    digest: 5b4fd0ad87d4cc7f49518c7f7520a22cf5c79e2b6cd807a3b01955d74c9a28a6
+    home: https://github.com/danielqsj/kafka_exporter
     keywords:
     - prometheus
-    - stackdriver
+    - kafka
     maintainers:
-    - email: arcadie.condrat@gmail.com
-      name: acondrat
-    name: prometheus-to-sd
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: golgoth31@notrenet.com
+      name: golgoth31
+    name: prometheus-kafka-exporter
+    sources:
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter
     urls:
-    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-to-sd-0.4.0/prometheus-to-sd-0.4.0.tgz
-    version: 0.4.0
-generated: "2021-01-20T13:39:06.01349272Z"
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-kafka-exporter-0.2.1/prometheus-kafka-exporter-0.2.1.tgz
+    version: 0.2.1
+  prometheus-pingdom-exporter:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+      artifacthub.io/maintainers: |
+        - name: monotek
+          email: monotek23@gmail.com
+        - name: rpahli
+          email: pahli88@googlemail.com
+    apiVersion: v1
+    appVersion: 20190610-1
+    created: "2021-01-20T22:54:03.837770948Z"
+    description: A Helm chart for Prometheus Pingdom Exporter
+    digest: e5c1ec410b8eac6af9344efb1dd3be0c45ce63194d99c946aad8ef029bf650d3
+    home: https://github.com/giantswarm/prometheus-pingdom-exporter
+    icon: https://raw.githubusercontent.com/cncf/artwork/master/prometheus/icon/color/prometheus-icon-color.svg
+    keywords:
+    - prometheus
+    - pingdom
+    maintainers:
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: pahli88@googlemail.com
+      name: rpahli
+    name: prometheus-pingdom-exporter
+    sources:
+    - https://github.com/giantswarm/prometheus-pingdom-exporter
+    - https://github.com/camptocamp/prometheus-pingdom-exporter
+    - https://github.com/prometheus-community/helm-charts
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-pingdom-exporter-2.3.2/prometheus-pingdom-exporter-2.3.2.tgz
+    version: 2.3.2
+  prometheus-postgres-exporter:
+  - apiVersion: v1
+    appVersion: 0.8.0
+    created: "2021-01-20T22:54:04.055328518Z"
+    description: A Helm chart for prometheus postgres-exporter
+    digest: d2b736d4a710003f997329b277fdc3cc3b398e20f72c3b16663319872bd899fd
+    home: https://github.com/wrouesnel/postgres_exporter
+    keywords:
+    - postgresql
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    name: prometheus-postgres-exporter
+    sources:
+    - https://github.com/wrouesnel/postgres_exporter
+    urls:
+    - https://github.com/torstenwalter/prometheus-helm-charts/releases/download/prometheus-postgres-exporter-1.8.0/prometheus-postgres-exporter-1.8.0.tgz
+    version: 1.8.0
+generated: "2021-01-20T22:54:03.223305788Z"
